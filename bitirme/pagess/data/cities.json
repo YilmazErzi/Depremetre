@@ -1,0 +1,367 @@
+{
+  "adana": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Doğu Anadolu Fay Zonu ve çevresindeki aktif faylardan etkilenebilir.",
+    "color": "warning"
+  },
+  "adiyaman": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Doğu Anadolu Fay Hattı üzerinde yer alır.",
+    "color": "danger"
+  },
+  "afyonkarahisar": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Ege graben sistemine yakınlığı nedeniyle deprem riski vardır.",
+    "color": "warning"
+  },
+  "agri": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Doğu Anadolu Fay Zonu ve İran sınırına yakın aktif faylar etkili olur.",
+    "color": "danger"
+  },
+  "aksaray": {
+    "degree": "4. Derece Deprem Bölgesi (Düşük Risk)",
+    "desc": "Görece güvenli bölgeler arasındadır.",
+    "color": "success"
+  },
+  "amasya": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Kuzey Anadolu Fay Hattı’na yakındır.",
+    "color": "warning"
+  },
+  "ankara": {
+    "degree": "3. ve 4. Derece Deprem Bölgesi (Düşük Risk)",
+    "desc": "Türkiye'nin nispeten güvenli bölgelerinden biridir.",
+    "color": "success"
+  },
+  "antalya": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Batı Toroslar ve çevresindeki faylardan etkilenebilir.",
+    "color": "warning"
+  },
+  "ardahan": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Doğu Anadolu'nun kuzeydoğusunda yer alan aktif faylara yakındır.",
+    "color": "warning"
+  },
+  "artvin": {
+    "degree": "3. Derece Deprem Bölgesi",
+    "desc": "Görece daha az aktif faylara sahiptir.",
+    "color": "info"
+  },
+  "aydin": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Ege graben sistemi üzerinde yer alır.",
+    "color": "danger"
+  },
+  "balikesir": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Kuzey Anadolu ve Ege fay sistemlerinden etkilenir.",
+    "color": "danger"
+  },
+  "bartin": {
+    "degree": "3. Derece Deprem Bölgesi",
+    "desc": "Kuzey Anadolu Fayı’na görece uzaktır.",
+    "color": "info"
+  },
+  "batman": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Güneydoğu Anadolu bindirme kuşağı etkisi altındadır.",
+    "color": "warning"
+  },
+  "bayburt": {
+    "degree": "3. Derece Deprem Bölgesi",
+    "desc": "Görece düşük sismik aktiviteye sahiptir.",
+    "color": "info"
+  },
+  "bilecik": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Marmara bölgesindeki fay sistemlerinden etkilenebilir.",
+    "color": "warning"
+  },
+  "bingol": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Kuzey ve Doğu Anadolu faylarının kesişimindedir.",
+    "color": "danger"
+  },
+  "bitlis": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Doğu Anadolu bindirme zonu üzerindedir.",
+    "color": "danger"
+  },
+  "bolu": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Kuzey Anadolu Fay Hattı doğrudan il sınırlarından geçer.",
+    "color": "danger"
+  },
+  "burdur": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Fethiye-Burdur Fay Zonu üzerinde yer alır.",
+    "color": "danger"
+  },
+  "bursa": {
+    "degree": "1. ve 2. Derece Deprem Bölgesi",
+    "desc": "Marmara Denizi fay sistemlerinden etkilenir.",
+    "color": "danger"
+  },
+  "canakkale": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Ege Denizi fay sistemine yakındır.",
+    "color": "danger"
+  },
+  "cankiri": {
+    "degree": "3. Derece Deprem Bölgesi",
+    "desc": "KAF’a nispeten uzak bir konumdadır.",
+    "color": "info"
+  },
+  "corum": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Kuzey Anadolu Fayı etkisi altındadır.",
+    "color": "warning"
+  },
+  "denizli": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Ege graben sistemi üzerinde yer alır.",
+    "color": "danger"
+  },
+  "diyarbakir": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Doğu Anadolu Fayı'nın güneyinde yer alır.",
+    "color": "warning"
+  },
+  "duzce": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Kuzey Anadolu Fayı üzerinde yer alır.",
+    "color": "danger"
+  },
+  "edirne": {
+    "degree": "3. Derece Deprem Bölgesi",
+    "desc": "Marmara faylarına görece uzaktır.",
+    "color": "info"
+  },
+  "elazig": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Doğu Anadolu Fayı üzerinde yer alır.",
+    "color": "danger"
+  },
+  "erzincan": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Kuzey Anadolu Fayı üzerinde yer alır.",
+    "color": "danger"
+  },
+  "erzurum": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Doğu Anadolu’daki aktif faylardan etkilenebilir.",
+    "color": "warning"
+  },
+  "eskisehir": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Eskişehir Fay Zonu etkisi altındadır.",
+    "color": "warning"
+  },
+  "gaziantep": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Doğu Anadolu Fayı’na yakın konumdadır.",
+    "color": "warning"
+  },
+  "giresun": {
+    "degree": "3. Derece Deprem Bölgesi",
+    "desc": "Karadeniz kıyısı boyunca düşük risklidir.",
+    "color": "info"
+  },
+  "gumushane": {
+    "degree": "3. Derece Deprem Bölgesi",
+    "desc": "Görece düşük sismik aktiviteye sahiptir.",
+    "color": "info"
+  },
+  "hakkari": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Zagros bindirme kuşağına yakındır.",
+    "color": "warning"
+  },
+  "hatay": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Doğu Anadolu ve Ölü Deniz faylarının kesişimindedir.",
+    "color": "danger"
+  },
+  "istanbul": {
+    "degree": "1. ve 2. Derece Deprem Bölgesi",
+    "desc": "Kuzey Anadolu Fay Hattı'nın batı uzantısı tehdit oluşturur.",
+    "color": "danger"
+  },
+  "izmir": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Ege graben sistemi üzerinde yer alır.",
+    "color": "danger"
+  },
+  "kahramanmaras": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Doğu Anadolu Fay Hattı üzerinde yer alır.",
+    "color": "danger"
+  },
+  "karaman": {
+    "degree": "4. Derece Deprem Bölgesi (Düşük Risk)",
+    "desc": "Görece güvenli bölgeler arasındadır.",
+    "color": "success"
+  },
+  "kastamonu": {
+    "degree": "3. Derece Deprem Bölgesi",
+    "desc": "KAF’a görece uzaktır.",
+    "color": "info"
+  },
+  "kayseri": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Orta Anadolu fay sistemleri etkisi altındadır.",
+    "color": "warning"
+  },
+  "kilis": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Doğu Anadolu Fay Zonu’na yakındır.",
+    "color": "warning"
+  },
+  "kocaeli": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Kuzey Anadolu Fay Hattı üzerinde yer alır.",
+    "color": "danger"
+  },
+  "konya": {
+    "degree": "4. Derece Deprem Bölgesi (Düşük Risk)",
+    "desc": "Türkiye’nin en düşük riskli illerinden biridir.",
+    "color": "success"
+  },
+  "kutahya": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Ege fay sistemlerinden etkilenebilir.",
+    "color": "warning"
+  },
+  "malatya": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Doğu Anadolu Fay Hattı üzerinde yer alır.",
+    "color": "danger"
+  },
+  "manisa": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Ege graben sistemi üzerinde yer alır.",
+    "color": "danger"
+  },
+  "mardin": {
+    "degree": "3. Derece Deprem Bölgesi",
+    "desc": "Görece düşük sismik aktiviteye sahiptir.",
+    "color": "info"
+  },
+  "mersin": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Akdeniz fay sistemlerine yakındır.",
+    "color": "warning"
+  },
+  "mugla": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Ege ve Akdeniz faylarının etkisi altındadır.",
+    "color": "danger"
+  },
+  "nevsehir": {
+    "degree": "4. Derece Deprem Bölgesi (Düşük Risk)",
+    "desc": "Görece güvenli bir bölgededir.",
+    "color": "success"
+  },
+  "nigde": {
+    "degree": "4. Derece Deprem Bölgesi (Düşük Risk)",
+    "desc": "Düşük sismik aktiviteye sahiptir.",
+    "color": "success"
+  },
+  "ordu": {
+    "degree": "3. Derece Deprem Bölgesi",
+    "desc": "Karadeniz kıyısında görece düşük risklidir.",
+    "color": "info"
+  },
+  "osmaniye": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Doğu Anadolu Fay Zonu’na yakındır.",
+    "color": "danger"
+  },
+  "rize": {
+    "degree": "3. Derece Deprem Bölgesi",
+    "desc": "Düşük sismik aktiviteye sahiptir.",
+    "color": "info"
+  },
+  "sakarya": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Kuzey Anadolu Fay Hattı üzerindedir.",
+    "color": "danger"
+  },
+  "samsun": {
+    "degree": "3. Derece Deprem Bölgesi",
+    "desc": "Karadeniz kıyısında görece düşük risklidir.",
+    "color": "info"
+  },
+  "siirt": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Güneydoğu Anadolu bindirme kuşağı etkisi altındadır.",
+    "color": "warning"
+  },
+  "sinop": {
+    "degree": "3. Derece Deprem Bölgesi",
+    "desc": "Görece güvenli bölgeler arasındadır.",
+    "color": "info"
+  },
+  "sivas": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Kuzey Anadolu Fay Zonu etkisi altındadır.",
+    "color": "warning"
+  },
+  "sanliurfa": {
+    "degree": "3. Derece Deprem Bölgesi",
+    "desc": "Görece düşük sismik risk taşır.",
+    "color": "info"
+  },
+  "sirnak": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Zagros bindirme kuşağı etkisi altındadır.",
+    "color": "warning"
+  },
+  "tekirdag": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Marmara Denizi faylarına yakındır.",
+    "color": "warning"
+  },
+  "tokat": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Kuzey Anadolu Fay Zonu etkisi altındadır.",
+    "color": "warning"
+  },
+  "trabzon": {
+    "degree": "3. Derece Deprem Bölgesi",
+    "desc": "Karadeniz kıyısında görece düşük risklidir.",
+    "color": "info"
+  },
+  "tunceli": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Doğu Anadolu Fay Zonu üzerindedir.",
+    "color": "danger"
+  },
+  "usak": {
+    "degree": "2. Derece Deprem Bölgesi",
+    "desc": "Ege fay sistemlerine yakındır.",
+    "color": "warning"
+  },
+  "van": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Doğu Anadolu bindirme kuşağı üzerindedir.",
+    "color": "danger"
+  },
+  "yalova": {
+    "degree": "1. Derece Deprem Bölgesi (Yüksek Risk)",
+    "desc": "Kuzey Anadolu Fay Hattı üzerindedir.",
+    "color": "danger"
+  },
+  "yozgat": {
+    "degree": "3. Derece Deprem Bölgesi",
+    "desc": "Görece düşük sismik aktiviteye sahiptir.",
+    "color": "info"
+  },
+  "zonguldak": {
+    "degree": "3. Derece Deprem Bölgesi",
+    "desc": "KAF’a görece uzak bir konumdadır.",
+    "color": "info"
+  }
+}

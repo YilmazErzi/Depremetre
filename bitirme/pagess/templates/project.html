@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Project
+{% endblock title %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        
+        <div class="col-3 bg-success text-white p-4 border rounded-start">
+            <h2>About Project</h2>
+        </div>
+
+        <div class="col-9 bg-light text-dark p-4 border rounded-end">
+            <p>
+                This project was implemented as part of an Integrated Interdisciplinary Project. 
+                The project's aim is to raise public awareness about earthquakes and inform
+                them about both the structures they live in and the geography they inhabit.
+            </p><br>
+            <p>The instant earthquake information displayed in this project was taken 
+                from a website provided by BOGAZICI UNIVERSITY and KANDILLI OBSERVATORY 
+                AND EARTHQUAKE RESEARCH INSTITUTE (KRDAE).
+            </p>
+            <a href="http://www.koeri.boun.edu.tr/scripts/lst0.asp" target="_blank">
+            Boğaziçi University Kandilli Observatory and Earthquake Research Institute
+            </a>
+        </div>
+    </div>
+    
+    <hr class="my-5"> 
+    
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-10"> 
+            <div class="card shadow">
+                <div class="card-header bg-dark text-white">
+                    <h3 class="mb-0">🏢 Building Earthquake Risk Assessment</h3>
+                </div>
+                <div class="card-body p-4">
+
+                    {% if result %}
+                        <div class="text-center">
+                            <h4 class="mb-3">{{ result.building_name }}</h4>
+                            
+                            <div class="alert" style="background-color: {{ result.color }}; color: white; opacity: 0.9;">
+                                <h1 class="display-3 fw-bold">{{ result.score }} / 100</h1>
+                                <h3 class="fw-bold">{{ result.level }}</h3>
+                                <hr>
+                                <p class="fs-5">{{ result.message }}</p>
+                            </div>
+
+                            <a href="{% url 'project' %}" class="btn btn-outline-dark mt-3">Calculate New Assessment</a>
+                        </div>
+
+                    {% else %}
+                        <div class="alert alert-warning d-flex align-items-center" role="alert">
+                            <div>
+                                <small>⚠️ <strong>Disclaimer:</strong> This test is not a scientific report. It is a risk prediction simulation based on rapid visual screening criteria. Professional inspection is required for accurate results.</small>
+                            </div>
+                        </div>
+
+                        <form method="post">
+                            {% csrf_token %}
+                            
+                            {% for field in form %}
+                                <div class="mb-4 p-2 border-bottom">
+                                    <label class="form-label fw-bold fs-5">{{ field.label }}</label>
+                                    
+                                    <div class="ms-3">
+                                        {% for radio in field %}
+                                            <div class="form-check mb-2">
+                                                {{ radio.tag }}
+                                                <label class="form-check-label" for="{{ radio.id_for_label }}" style="cursor: pointer;">
+                                                    {{ radio.data.label }} 
+                                                </label>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    
+                                    {% if field.errors %}
+                                        <div class="text-danger small mt-1">
+                                            {{ field.errors }}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+
+                            <div class="d-grid gap-2 mt-4">
+                                <button type="submit" class="btn btn-success btn-lg">Calculate Risk Score</button>
+                            </div>
+                        </form>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

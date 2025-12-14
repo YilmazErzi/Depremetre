@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}
+    about
+{% endblock title %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        
+        <div class="col-3 bg-success text-white p-4 border rounded-start">
+            <h2>About Team</h2>
+        </div>
+
+        
+        <div class="col-9 bg-light text-dark p-4 border rounded-end">
+            {% for member in team %}
+                {% if not forloop.last %}
+                    <div class="p-3 mb-3 border rounded shadow-sm bg-white">
+                        <strong>{{ member.first_name }}</strong>&nbsp;<strong>{{ member.last_name }}</strong><br>
+                        Department: {{ member.Department }}<br>
+                        E-mail: 
+                        <a href="mailto:{{ member.person_mail }}">{{ member.person_mail }}</a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="container mt-4">
+    {% for member in team %}
+        {% if forloop.last %}
+            <div class="p-3 mb-3 border rounded shadow-sm bg-white">
+                <strong>Advisor</strong><br>
+                <strong>{{ member.first_name }}</strong>&nbsp;<strong>{{ member.last_name }}</strong>
+                Department: {{ member.Department }}<br>
+                E-mail: 
+                <a href="mailto:{{ member.person_mail }}">{{ member.person_mail }}</a>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+{% endblock content %}

@@ -1,0 +1,201 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    MainPage
+{% endblock title %}
+
+{% block content %}
+
+<div class="container mt-4">
+    
+    <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+        <div class="row g-0">
+            
+            <div class="col-md-3 bg-success d-flex flex-column align-items-center justify-content-center p-4 text-white text-center position-relative">
+                <i class="fa-solid fa-house-crack fa-5x mb-3 opacity-50"></i>
+                
+                <h2 class="fw-bold mb-1 display-6">Depremetre</h2>
+                <p class="small text-white-50 mb-0">Live Monitoring System</p>
+                
+                <div class="mt-4 border-top border-white border-opacity-25 w-50"></div>
+            </div>
+
+            <div class="col-md-9 bg-white">
+                <div class="p-4">
+                    
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4 class="text-success fw-bold mb-0">
+                            <i class="fa-solid fa-tower-broadcast me-2"></i>Instant Earthquake Info
+                        </h4>
+                        <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-3 py-2">
+                            <i class="fa-solid fa-circle fa-xs me-1 fa-fade"></i> Live Feed
+                        </span>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead class="bg-light text-secondary small text-uppercase">
+                                <tr>
+                                    <th class="border-0 py-3 ps-3">Date</th>
+                                    <th class="border-0 py-3">Time</th>
+                                    <th class="border-0 py-3 text-center">Magnitude</th>
+                                    <th class="border-0 py-3">Location</th>
+                                </tr>
+                            </thead>
+                            <tbody class="border-top-0">
+                                {% for eq in earthquakes %}
+                                <tr>
+                                    <td class="fw-bold text-dark ps-3">{{ eq.tarih }}</td>
+                                    
+                                    <td class="text-muted">
+                                        <i class="fa-regular fa-clock me-1 small"></i>{{ eq.saat }}
+                                    </td>
+                                    
+                                    <td class="text-center">
+                                        <span class="badge rounded-pill bg-danger shadow-sm px-3 py-2">
+                                            {{ eq.ml }} ML
+                                        </span>
+                                    </td>
+                                    
+                                    <td class="small text-secondary fw-semibold">
+                                        <i class="fa-solid fa-location-dot text-danger me-1"></i>
+                                        {{ eq.yer }}
+                                    </td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="4" class="text-center py-5 text-muted">
+                                        <i class="fa-solid fa-satellite-dish fa-2x mb-3 text-secondary opacity-50"></i><br>
+                                        No earthquake data available at the moment.
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<hr class="my-5"> 
+
+<div class="container mt-3">
+    <h3 class="bg-success text-white p-3 rounded text-center shadow-sm mb-4">
+        Do you want to learn your city's earthquake profile?
+    </h3>
+    
+    <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+        <div class="row g-0"> <div class="col-md-6 position-relative bg-dark" style="min-height: 450px;">
+                <video autoplay muted loop playsinline style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    opacity: 0.85;
+                    ">
+                    <source src="{% static 'videos/sismograf.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <div class="position-absolute bottom-0 start-0 p-4 text-white" style="background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); width: 100%;">
+                    <h3 class="fw-bold">Know Your Risk</h3>
+                    <p class="mb-0 small">Discover the seismic profile of your city with official data.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 bg-white p-4 p-md-5 d-flex flex-column justify-content-center">
+                
+                <div class="text-start mb-4">
+                    <h4 class="fw-bold text-success"><i class="fa-solid fa-city me-2"></i>Check City Profile</h4>
+                    <p class="text-muted small">Enter a city name to access official fault line data and risk analysis.</p>
+                </div>
+
+                <form method="POST"> 
+                    {% csrf_token %} 
+                    
+                    <label for="city" class="form-label fw-bold text-dark small text-uppercase">Select a city</label>
+                    
+                    <div class="input-group input-group-lg mb-3 shadow-sm rounded-3">
+                        <span class="input-group-text bg-white border-end-0 text-success">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span>
+                        <input type="text" 
+                            id="city" 
+                            name="city" 
+                            class="form-control border-start-0 ps-0" 
+                            placeholder="e.g. Gaziantep, İstanbul..." 
+                            value="{{ city_name|default:'' }}"
+                            required>
+                        
+                        <button type="submit" class="btn btn-success px-4 fw-bold">
+                            CHECK
+                        </button>
+                    </div>
+                </form>
+
+                {% if result %}
+                    <div class="card border-0 bg-light rounded-3 mt-3 animate__animated animate__fadeIn">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0">
+                                    <i class="fa-solid fa-circle-info fa-2x text-{{ result.color }}"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h4 class="mb-0 fw-bold text-dark">{{ result.name }}</h4>
+                                    <small class="text-muted">Analysis Result</small>
+                                </div>
+                            </div>
+                            
+                            <div class="p-3 rounded-3 text-white bg-{{ result.color }} bg-gradient shadow-sm">
+                                <h5 class="fw-bold mb-1">{{ result.degree }}</h5>
+                                <hr class="my-2" style="opacity: 0.3;">
+                                <p class="mb-0 small">{{ result.desc }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% elif error %}
+                    <div class="alert alert-danger d-flex align-items-center mt-4 shadow-sm rounded-3" role="alert">
+                        <i class="fa-solid fa-triangle-exclamation me-2 fa-lg"></i>
+                        <div>{{ error }}</div>
+                    </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-12">
+            
+            <div class="p-5 bg-light border rounded-3 shadow-sm">
+                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center text-center">
+                    
+                    <h3 class="mb-0 me-md-4 mb-3 mb-md-0">
+                        Are you curious about your building's earthquake risk score?
+                    </h3>
+
+                    <a href="{% url 'project' %}" class="btn btn-danger btn-lg px-4 shadow">
+                        Calculate Risk Now
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+{% block css_files %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+{% endblock css_files %}
